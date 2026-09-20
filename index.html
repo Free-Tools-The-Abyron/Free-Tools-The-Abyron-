@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Free, private browser-based utility tools for images, text, calculators and everyday tasks. No uploads required for local tools.">
+  <title>Free Tools — Fast, Private, Browser-Based</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" data-route="home"><span class="brand-mark">F</span><span>FreeTools</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="mainNav" class="nav" aria-label="Main navigation">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#images" data-route="images">Images</a>
+      <a href="#pdf" data-route="pdf">PDF</a>
+      <a href="#text" data-route="text">Text</a>
+      <a href="#calculators" data-route="calculators">Calculators</a>
+      <a href="#utilities" data-route="utilities">Utilities</a>
+      <a href="#about" data-route="about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page active-page">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">PRIVATE • FAST • NO SIGN-UP</p>
+          <h1>Useful tools that run<br><span>right in your browser.</span></h1>
+          <p class="hero-copy">Compress images, create PDFs, clean text, calculate values and generate utilities without sending your files to a server.</p>
+          <div class="hero-actions"><a class="btn primary" href="#images">Explore tools</a><a class="btn ghost" href="#about">How it works</a></div>
+        </div>
+        <div class="hero-card"><div class="pulse"></div><strong>Local-first</strong><span>Your files stay on your device for browser-only tools.</span></div>
+      </div>
+      <div class="stats"><div><b>25+</b><span>tools & utilities</span></div><div><b>0</b><span>uploads required</span></div><div><b>1</b><span>simple interface</span></div></div>
+      <div class="section-head"><div><p class="eyebrow">START HERE</p><h2>Popular tools</h2></div><a href="#images">View all →</a></div>
+      <div class="tool-grid" id="homeTools"></div>
+    </section>
+
+    <section id="images" class="page"><div class="page-head"><p class="eyebrow">IMAGE TOOLS</p><h2>Work with images locally</h2><p>Nothing is uploaded. Processing happens inside your browser.</p></div><div class="tool-grid" id="imageTools"></div></section>
+    <section id="pdf" class="page"><div class="page-head"><p class="eyebrow">PDF TOOLS</p><h2>PDF utilities</h2><p>Image-to-PDF works fully offline. Advanced arbitrary-PDF parsing is intentionally not faked.</p></div><div class="tool-grid" id="pdfTools"></div></section>
+    <section id="text" class="page"><div class="page-head"><p class="eyebrow">TEXT TOOLS</p><h2>Clean, transform and inspect text</h2></div><div class="tool-grid" id="textTools"></div></section>
+    <section id="calculators" class="page"><div class="page-head"><p class="eyebrow">CALCULATORS</p><h2>Everyday calculators</h2></div><div class="tool-grid" id="calculatorTools"></div></section>
+    <section id="utilities" class="page"><div class="page-head"><p class="eyebrow">UTILITIES</p><h2>Small tools, big convenience</h2></div><div class="tool-grid" id="utilityTools"></div></section>
+
+    <section id="about" class="page"><div class="about-card"><p class="eyebrow">ABOUT</p><h2>Built to be simple.</h2><p>This project is a static, GitHub-friendly website. It has no required backend, account system, analytics script or third-party API. Most tools use browser APIs directly.</p><div class="notice"><strong>Privacy note</strong><span>Local tools process files in your browser. Your hosting provider still receives the normal website request when you open the site.</span></div><h3>Deployment</h3><ol><li>Upload this folder to a GitHub repository.</li><li>Open Settings → Pages.</li><li>Select the main branch and root folder.</li><li>Save and open the generated GitHub Pages URL.</li></ol></div></section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div id="modalBody"></div></div></div>
+  <footer><span>FreeTools • Browser-first utilities</span><span>© <span id="year"></span></span></footer>
+
+  <script src="vendor/qrcode/QRMode.js"></script>
+  <script src="vendor/qrcode/QRErrorCorrectLevel.js"></script>
+  <script src="vendor/qrcode/QRMaskPattern.js"></script>
+  <script src="vendor/qrcode/QRMath.js"></script>
+  <script src="vendor/qrcode/QRPolynomial.js"></script>
+  <script src="vendor/qrcode/QRBitBuffer.js"></script>
+  <script src="vendor/qrcode/QR8bitByte.js"></script>
+  <script src="vendor/qrcode/QRUtil.js"></script>
+  <script src="vendor/qrcode/QRRSBlock.js"></script>
+  <script src="vendor/qrcode/index-browser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
